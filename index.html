@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio profissional de desenvolvedor de software com foco em back-end, web e mobile."
+    />
+    <title>Gabriel Bauer | Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="1.png" type="image/png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+    <header class="header">
+      <nav class="nav container">
+        <a href="#hero" class="logo" aria-label="Início">
+          <img src="1.png" alt="Logo Gabriel Bauer" width="40" height="40" />
+        </a>
+        <button class="menu-toggle" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#experiencia">Formação</a></li>
+          <li><a href="#carreiras">Carreiras</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero container reveal">
+        <p class="hero-tag">DESENVOLVEDOR FULL STACK</p>
+        <h1>Gabriel Bauer</h1>
+        <p class="hero-role">Computer Science Student · Back-end · Front-end · Mobile</p>
+        <p class="hero-impact">
+          Transformo ideias em soluções digitais limpas, escaláveis e
+          centradas em resultado.
+        </p>
+        <div class="hero-actions">
+          <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+          <a href="#contato" class="btn btn-outline">Contato</a>
+        </div>
+      </section>
+
+      <section id="sobre" class="section container reveal">
+        <h2>Sobre Mim</h2>
+        <p class="section-intro">
+          Sou estudante do 7º período de Ciência da Computação na 
+          Universidade Tuiuti do Paraná, com interesse em desenvolvimento 
+          de software e aplicações web e mobile. Embora ainda não possua 
+          experiência profissional na área, acompanho o mercado de 
+          desenvolvimento desde 2021, buscando constantemente aprender novas 
+          tecnologias e aprimorar minhas habilidades. Estou em busca de uma 
+          oportunidade para aplicar meus conhecimentos na prática, contribuir 
+          com soluções eficientes e continuar evoluindo como desenvolvedor.
+        </p>
+        <div class="about-highlights">
+          <article class="highlight-card">
+            <h3>Base Acadêmica</h3>
+            <p>
+              Graduação em Ciência da Computação com estudos contínuos em
+              algoritmos, estruturas de dados e engenharia de software.
+            </p>
+          </article>
+          <article class="highlight-card">
+            <h3>Interesse Principal</h3>
+            <p>
+              Desenvolvimento de sistemas Full Stack, APIs, bancos de dados e
+              integração com aplicações web e mobile.
+            </p>
+          </article>
+          <article class="highlight-card">
+            <h3>Objetivo</h3>
+            <p>
+              Entregar soluções com qualidade técnica, código limpo e impacto
+              real para produtos e usuários.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="habilidades" class="section container reveal">
+        <h2>Habilidades</h2>
+        <p class="section-intro">
+          Tecnologias e ferramentas que utilizo no dia a dia.
+        </p>
+        <div class="skills-grid">
+          <article class="skill-card"><i data-lucide="code-2"></i><span>Python</span></article>
+          <article class="skill-card"><i data-lucide="cup-soda"></i><span>Java</span></article>
+          <article class="skill-card"><i data-lucide="file-code-2"></i><span>HTML</span></article>
+          <article class="skill-card"><i data-lucide="palette"></i><span>CSS</span></article>
+          <article class="skill-card"><i data-lucide="braces"></i><span>JavaScript</span></article>
+          <article class="skill-card"><i data-lucide="smartphone"></i><span>Flutter</span></article>
+          <article class="skill-card"><i data-lucide="database"></i><span>SQL</span></article>
+          <article class="skill-card"><i data-lucide="git-branch"></i><span>Git / GitHub</span></article>
+        </div>
+      </section>
+
+      <section id="projetos" class="section container reveal">
+        <h2>Projetos</h2>
+        <p class="section-intro">
+          Alguns projetos acadêmicos e pessoais.
+        </p>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-carousel">
+              <div class="project-carousel-track">
+                <div class="project-carousel-slide"><img src="todolist1.jpeg" alt="To Do List - tela 1" /></div>
+                <div class="project-carousel-slide"><img src="todolist2.jpeg" alt="To Do List - tela 2" /></div>
+                <div class="project-carousel-slide"><img src="todolist3.jpeg" alt="To Do List - tela 3" /></div>
+              </div>
+              <button type="button" class="carousel-btn carousel-prev" aria-label="Imagem anterior"><i data-lucide="chevron-left"></i></button>
+              <button type="button" class="carousel-btn carousel-next" aria-label="Próxima imagem"><i data-lucide="chevron-right"></i></button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <h3>To Do List</h3>
+              <p>
+                Aplicação web de lista de tarefas desenvolvida com HTML, CSS e JavaScript, permitindo adicionar, remover e marcar tarefas como concluídas.
+              </p>
+              <p class="techs">Html · Css · JavaScript</p>
+              <div class="project-actions">
+                <a href="https://github.com/bauerzinn/To_do_list" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-carousel">
+              <div class="project-carousel-track">
+                <div class="project-carousel-slide"><img src="1.png" alt="Distro Linux" /></div>
+              </div>
+              <button type="button" class="carousel-btn carousel-prev" aria-label="Imagem anterior"><i data-lucide="chevron-left"></i></button>
+              <button type="button" class="carousel-btn carousel-next" aria-label="Próxima imagem"><i data-lucide="chevron-right"></i></button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <h3>Curso Java</h3>
+              <p>
+                Curso de Java Udemy do básico ao avançado, com foco em conceitos de programação orientada a objetos, algoritmos e estruturas de dados.
+              </p>
+              <p class="techs">Java</p>
+              <div class="project-actions">
+                <a href="https://github.com/bauerzinn/Curso.java" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-carousel">
+              <div class="project-carousel-track">
+                <div class="project-carousel-slide"><img src="hotelfy1.PNG" alt="Hotelfy - tela 1" /></div>
+                <div class="project-carousel-slide"><img src="hotelfy2.PNG" alt="Hotelfy - tela 2" /></div>
+                <div class="project-carousel-slide"><img src="hotelfy3.PNG" alt="Hotelfy - tela 3" /></div>
+              </div>
+              <button type="button" class="carousel-btn carousel-prev" aria-label="Imagem anterior"><i data-lucide="chevron-left"></i></button>
+              <button type="button" class="carousel-btn carousel-next" aria-label="Próxima imagem"><i data-lucide="chevron-right"></i></button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <h3>Hotelfy</h3>
+              <p>
+                Interface moderna para visualização e reserva de quartos de hotel de luxo ao redor do mundo.
+                O aplicativo permite navegar entre diferentes tipos de quartos, visualizar detalhes, imagens e informações importantes antes de realizar uma reserva.
+              </p>
+              <p class="techs">Flutter · Dart</p>
+              <div class="project-actions">
+                <a href="https://github.com/bauerzinn/Hotelfy" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experiencia" class="section container reveal">
+        <h2>Formação</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <h3>Tecnologo em Análise e Desenvolvimento de Sistemas</h3>
+            <p>
+              Formação voltada para desenvolvimento de sistemas, com foco em 
+              análise, design, implementação e manutenção de software.
+            </p>
+          </article>
+          <article class="timeline-item">
+            <h3>Graduação em Ciência da Computação</h3>
+            <p>
+              Formação voltada para fundamentos de computação, engenharia de
+              software e desenvolvimento orientado a soluções.
+            </p>
+          </article>
+          <article class="timeline-item">
+            <h3>Estudos em Design Ui & UX</h3>
+            <p>
+              Aprendizado contínuo em design de interface e experiência do usuário.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="carreiras" class="section container reveal">
+        <h2>Carreiras</h2>
+        <div class="career-grid">
+          <article class="career-card">
+            <i data-lucide="building-2"></i>
+            <h3>SANEPAR</h3>
+            <ul class="career-list">
+              <li>Auxílio ao DPO na conformidade com a LGPD.</li>
+              <li>Apoio no mapeamento e organização de processos de tratamento de dados pessoais.</li>
+              <li>Suporte a demandas de T.I e governança e segurança da informação.</li>
+              <li>Participação no acompanhamento de processos e controles de conformidade regulatória.</li>
+              <li>Auxílio na elaboração de relatórios, registros e documentações da gestão de dados pessoais.</li>
+            </ul>
+          </article>
+          <article class="career-card">
+            <i data-lucide="credit-card"></i>
+            <h3>Vendpago</h3>
+            <ul class="career-list">
+              <li>Atendimento e suporte a clientes na utilização de sistemas da VendPago integrados a equipamentos automatizados.</li>
+              <li>Suporte técnico relacionado a máquinas de vending machine, gruas (máquinas de prêmios) e lavanderias automáticas.</li>
+              <li>Orientação a clientes sobre configuração, funcionamento e uso da plataforma de pagamento.</li>
+              <li>Registro e acompanhamento de chamados técnicos, garantindo a resolução das demandas dos clientes.</li>
+              <li>Comunicação com equipes internas para análise e solução de problemas técnicos.</li>
+            </ul>
+          </article>
+          <article class="career-card">
+            <i data-lucide="shield-check"></i>
+            <h3>GoHome</h3>
+            <ul class="career-list">
+              <li>Suporte técnico a clientes no uso de sistemas de segurança e monitoramento em instituições de ensino.</li>
+              <li>Atendimento e resolução de chamados relacionados à plataforma e aos dispositivos de segurança.</li>
+              <li><strong>Manutenção e atualização de informações no banco de dados SQL</strong>, realizando ajustes e correções quando necessário.</li>
+              <li>Análise de inconsistências em dados e suporte na resolução de problemas relacionados ao sistema.</li>
+              <li>Apoio à equipe técnica na identificação e solução de falhas operacionais.</li>
+            </ul>
+        </div>
+      </section>
+
+      <section id="contato" class="section container reveal">
+        <h2>Contato</h2>
+        <p class="section-intro">
+          Aberto a oportunidades, parcerias e novos desafios.
+        </p>
+        <div class="contact-grid">
+          <a href="mailto:seuemail@email.com" class="contact-item">
+            <i data-lucide="mail">gabbauer1218@gmail.com</i> Email
+          </a>
+          <a href="https://github.com/bauerzinn" target="_blank" rel="noreferrer" class="contact-item">
+            <i data-lucide="github"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/gabriel-bauer-a213b9271/" target="_blank" rel="noreferrer" class="contact-item">
+            <i data-lucide="linkedin"></i> LinkedIn
+          </a>
+          <a href="./Currículo Gabriel Bauer.pdf" class="contact-item">
+            <i data-lucide="download"></i> Baixar CV
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <p>© <span id="year"></span> Gabriel Bauer. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
