@@ -6,17 +6,19 @@ const yearElement = document.getElementById("year");
 
 if (menuToggle && navLinks) {
   menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
+    const isOpen = navLinks.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
   });
 }
 
 navAnchors.forEach((anchor) => {
   anchor.addEventListener("click", () => {
     navLinks?.classList.remove("open");
+    menuToggle?.setAttribute("aria-expanded", "false");
   });
 });
 
-const observer = new IntersectionObserver(
+const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -27,7 +29,25 @@ const observer = new IntersectionObserver(
   { threshold: 0.15 }
 );
 
-revealElements.forEach((element) => observer.observe(element));
+revealElements.forEach((element) => revealObserver.observe(element));
+
+// Realça no menu a seção que está sendo lida no momento.
+const navLinkByHash = new Map();
+navAnchors.forEach((anchor) => navLinkByHash.set(anchor.getAttribute("href"), anchor));
+
+const spyObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const link = navLinkByHash.get(`#${entry.target.id}`);
+      if (!link || !entry.isIntersecting) return;
+      navAnchors.forEach((anchor) => anchor.removeAttribute("aria-current"));
+      link.setAttribute("aria-current", "location");
+    });
+  },
+  { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+);
+
+document.querySelectorAll("main section[id]").forEach((section) => spyObserver.observe(section));
 
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear().toString();
@@ -77,6 +97,13 @@ function initProjectCarousels() {
 
 initProjectCarousels();
 
-if (window.lucide) {
-  window.lucide.createIcons();
+// Tags de linguagem (Habilidades): em telas sem hover real, o toque alterna
+// a face colorida via classe — em dispositivos com mouse/trackpad, o CSS
+// :hover já resolve tudo e este bloco nem chega a rodar.
+if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+  document.querySelectorAll(".tag-swipe").forEach((tag) => {
+    tag.addEventListener("click", () => {
+      tag.classList.toggle("is-active");
+    });
+  });
 }

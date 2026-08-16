@@ -3,282 +3,574 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
     <meta
       name="description"
-      content="Portfólio profissional de desenvolvedor de software com foco em back-end, web e mobile."
+      content="Gabriel Bauer, desenvolvedor full stack e mobile em Curitiba (PR). Projetos com Flutter, Python, JavaScript e SQL Server, formação em Ciência da Computação e experiência com suporte técnico e proteção de dados (LGPD)."
     />
-    <meta name="theme-color" content="#0c0c0e" />
-    <title>Gabriel Bauer | Portfólio</title>
+    <meta name="theme-color" content="#F7F5F1" />
+    <title>Gabriel Bauer — Desenvolvedor Full Stack &amp; Mobile</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gabriel Bauer — Desenvolvedor Full Stack &amp; Mobile" />
+    <meta
+      property="og:description"
+      content="Projetos com Flutter, Python, JavaScript e SQL Server, formação em Ciência da Computação e experiência com suporte técnico e proteção de dados (LGPD)."
+    />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Gabriel Bauer — Desenvolvedor Full Stack &amp; Mobile" />
+    <meta
+      name="twitter:description"
+      content="Projetos com Flutter, Python, JavaScript e SQL Server, formação em Ciência da Computação e experiência com suporte técnico e LGPD."
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Inter+Tight:wght@700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="1.png" type="image/png" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gabriel Bauer",
+        "jobTitle": "Desenvolvedor Full Stack & Mobile",
+        "email": "mailto:gabbauer1218@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Curitiba",
+          "addressRegion": "PR",
+          "addressCountry": "BR"
+        },
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "Universidade Tuiuti do Paraná" },
+          { "@type": "CollegeOrUniversity", "name": "SENAI" }
+        ],
+        "knowsAbout": ["Flutter", "Python", "JavaScript", "SQL Server", "Java"],
+        "sameAs": [
+          "https://github.com/bauerzinn",
+          "https://www.linkedin.com/in/gabriel-bauer-a213b9271/"
+        ]
+      }
+    </script>
   </head>
   <body>
-    <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
-    <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+    <!-- Sprite de ícones — usados via <use href="#icon-x">, sem dependência externa -->
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden">
+      <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="m3 7 9 6 9-6" />
+      </symbol>
+      <symbol id="icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3v12" />
+        <path d="m7 10 5 5 5-5" />
+        <path d="M5 21h14" />
+      </symbol>
+      <symbol id="icon-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m15 18-6-6 6-6" />
+      </symbol>
+      <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m9 18 6-6-6-6" />
+      </symbol>
+      <symbol id="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 17 17 7" />
+        <path d="M7 7h10v10" />
+      </symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+      </symbol>
+    </svg>
 
     <header class="header">
       <nav class="nav container">
-        <a href="#hero" class="logo" aria-label="Início">
-          <img src="1.png" alt="Logo Gabriel Bauer" width="40" height="40" />
+        <a href="#hero" class="logo">
+          <img src="favicon.svg" alt="" width="30" height="30" />
+          <span>Gabriel Bauer</span>
         </a>
-        <button class="menu-toggle" aria-label="Abrir menu">
+        <button type="button" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
           <span></span><span></span><span></span>
         </button>
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#habilidades">Habilidades</a></li>
           <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#experiencia">Formação</a></li>
-          <li><a href="#carreiras">Carreiras</a></li>
+          <li><a href="#experiencia">Experiência</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
+    <main id="main">
       <section id="hero" class="hero container reveal">
-        <p class="hero-tag">DESENVOLVEDOR FULL STACK & MOBILE</p>
+        <p class="hero-kicker">Curitiba, BR · aberto a novas oportunidades</p>
         <h1>Gabriel Bauer</h1>
-        <p class="hero-role">Computer Science Student · Back-end · Front-end · Mobile</p>
-        <p class="hero-impact">
-          Transformo ideias em soluções digitais limpas, escaláveis e
-          centradas em resultado.
+        <p class="hero-role">Desenvolvedor Full Stack &amp; Mobile</p>
+        <p class="hero-lede">
+          Construo interfaces web e aplicativos mobile com Flutter, e uso Python e SQL
+          para dar conta da parte que fica atrás da tela. Ainda no 8º período de Ciência
+          da Computação — aprendendo rápido e testando cada tecnologia nova em projetos
+          reais antes de colocar no currículo.
         </p>
+
+        <dl class="hero-facts">
+          <div><dt>Localização</dt><dd>Curitiba, PR</dd></div>
+          <div><dt>Formação</dt><dd>Ciência da Computação — UTP, 8º período</dd></div>
+          <div><dt>Atualmente</dt><dd>Suporte técnico na GO HOME</dd></div>
+          <div><dt>Foco técnico</dt><dd>Front-end, Kotlin e banco de dados</dd></div>
+        </dl>
+
         <div class="hero-actions">
-          <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
-          <a href="#contato" class="btn btn-outline">Contato</a>
+          <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+          <a href="./Gabriel Bauer.pdf" target="_blank" rel="noopener" class="btn btn-outline">
+            Currículo <span aria-hidden="true">(PDF)</span>
+          </a>
         </div>
       </section>
 
       <section id="sobre" class="section container reveal">
-        <h2>Sobre Mim</h2>
-        <p class="section-intro">
-          Sou estudante do 7º período de Ciência da Computação na 
-          Universidade Tuiuti do Paraná, com interesse em desenvolvimento 
-          de software e aplicações web e mobile. Embora ainda não possua 
-          experiência profissional na área, acompanho o mercado de 
-          desenvolvimento desde 2021, buscando constantemente aprender novas 
-          tecnologias e aprimorar minhas habilidades. Estou em busca de uma 
-          oportunidade para aplicar meus conhecimentos na prática, contribuir 
-          com soluções eficientes e continuar evoluindo como desenvolvedor.
-        </p>
-        <div class="about-highlights">
-          <article class="highlight-card">
-            <h3>Base Acadêmica</h3>
-            <p>
-              Graduação em Ciência da Computação com estudos contínuos em
-              algoritmos, estruturas de dados e engenharia de software.
-            </p>
-          </article>
-          <article class="highlight-card">
-            <h3>Interesse Principal</h3>
-            <p>
-              Desenvolvimento de sistemas Full Stack, APIs, bancos de dados e
-              integração com aplicações web e mobile.
-            </p>
-          </article>
-          <article class="highlight-card">
-            <h3>Objetivo</h3>
-            <p>
-              Entregar soluções com qualidade técnica, código limpo e impacto
-              real para produtos e usuários.
-            </p>
-          </article>
+        <div class="section-head">
+          <span class="section-index">01</span>
+          <h2>Sobre</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            Mesmo não tendo experiência profissional como desenvolvedor, acompanho o mercado de desenvolvimento
+            desde 2021, e nesse período passei por estágios em T.I., suporte técnico e
+            conformidade com a LGPD, sempre em contato próximo com sistemas, dados e o
+            lado operacional de tecnologia.
+          </p>
+          <p>
+            Fora da faculdade, o tempo vai para projetos de verdade: interfaces em
+            Flutter, scripts em Python com banco de dados, aplicações web do zero. É
+            assim que testo o que aprendo antes de colocar no currículo — e é o tipo de
+            trabalho que quero continuar fazendo, agora dentro de um time de
+            desenvolvimento.
+          </p>
         </div>
       </section>
 
       <section id="habilidades" class="section container reveal">
-        <h2>Habilidades</h2>
+        <div class="section-head">
+          <span class="section-index">02</span>
+          <h2>Habilidades</h2>
+        </div>
         <p class="section-intro">
-          Tecnologias e ferramentas que utilizo no dia a dia.
+          Organizadas por onde eu de fato as uso, não como uma lista solta de badges.
         </p>
-        <div class="skills-grid">
-          <article class="skill-card"><i data-lucide="code-2"></i><span>Python</span></article>
-          <article class="skill-card"><i data-lucide="cup-soda"></i><span>Java</span></article>
-          <article class="skill-card"><i data-lucide="file-code-2"></i><span>HTML</span></article>
-          <article class="skill-card"><i data-lucide="palette"></i><span>CSS</span></article>
-          <article class="skill-card"><i data-lucide="braces"></i><span>JavaScript</span></article>
-          <article class="skill-card"><i data-lucide="smartphone"></i><span>Flutter</span></article>
-          <article class="skill-card"><i data-lucide="database"></i><span>SQL</span></article>
-          <article class="skill-card"><i data-lucide="git-branch"></i><span>Git / GitHub</span></article>
+
+        <div class="skills-list">
+          <article class="skill-group">
+            <div class="skill-group-label">
+              <span class="field-label">Frontend</span>
+              <p>Interfaces web responsivas, do zero ao deploy.</p>
+            </div>
+            <ul class="tag-list">
+              <li class="tag-swipe" data-lang="html" tabindex="0">
+                <span class="tag-swipe-face tag-swipe-face--base">HTML5</span>
+                <span class="tag-swipe-face tag-swipe-face--fill" aria-hidden="true">HTML5</span>
+              </li>
+              <li class="tag-swipe" data-lang="css" tabindex="0">
+                <span class="tag-swipe-face tag-swipe-face--base">CSS3</span>
+                <span class="tag-swipe-face tag-swipe-face--fill" aria-hidden="true">CSS3</span>
+              </li>
+              <li class="tag-swipe" data-lang="js" tabindex="0">
+                <span class="tag-swipe-face tag-swipe-face--base">JavaScript</span>
+                <span class="tag-swipe-face tag-swipe-face--fill" aria-hidden="true">JavaScript</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="skill-group">
+            <div class="skill-group-label">
+              <span class="field-label">Backend</span>
+              <p>Lógica de aplicação e scripts que sustentam o que roda na tela.</p>
+            </div>
+            <ul class="tag-list">
+              <li class="tag-swipe" data-lang="python" tabindex="0">
+                <span class="tag-swipe-face tag-swipe-face--base">Python</span>
+                <span class="tag-swipe-face tag-swipe-face--fill" aria-hidden="true">Python</span>
+              </li>
+              <li class="tag-swipe" data-lang="java" tabindex="0">
+                <span class="tag-swipe-face tag-swipe-face--base">Java</span>
+                <span class="tag-swipe-face tag-swipe-face--fill" aria-hidden="true">Java</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="skill-group">
+            <div class="skill-group-label">
+              <span class="field-label">Mobile</span>
+              <p>Apps para Android e iOS com uma única base de código.</p>
+            </div>
+            <ul class="tag-list">
+              <li class="tag-swipe" data-lang="flutter" tabindex="0">
+                <span class="tag-swipe-face tag-swipe-face--base">Flutter</span>
+                <span class="tag-swipe-face tag-swipe-face--fill" aria-hidden="true">Flutter</span>
+              </li>
+              <li class="tag-swipe" data-lang="Kotlin" tabindex="0">
+                <span class="tag-swipe-face tag-swipe-face--base">Kotlin</span>
+                <span class="tag-swipe-face tag-swipe-face--fill" aria-hidden="true">Kotlin</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="skill-group">
+            <div class="skill-group-label">
+              <span class="field-label">Banco de Dados</span>
+              <p>Modelagem e persistência de dados em projetos reais.</p>
+            </div>
+            <ul class="tag-list">
+              <li class="tag-swipe" data-lang="sql" tabindex="0">
+                <span class="tag-swipe-face tag-swipe-face--base">SQL Server</span>
+                <span class="tag-swipe-face tag-swipe-face--fill" aria-hidden="true">SQL Server</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="skill-group">
+            <div class="skill-group-label">
+              <span class="field-label">Ferramentas &amp; complementares</span>
+              <p>O que sustenta o trabalho em volta do código.</p>
+            </div>
+            <ul class="tag-list">
+              
+              
+              <li class="tag-swipe" data-lang="git" tabindex="0">
+                <span class="tag-swipe-face tag-swipe-face--base">Git &amp; GitHub</span>
+                <span class="tag-swipe-face tag-swipe-face--fill" aria-hidden="true">Git &amp; GitHub</span>
+              </li>
+
+              <li class="tag-swipe" data-lang="git" tabindex="0">
+                <span class="tag-swipe-face tag-swipe-face--base">LGPD &amp; proteção de dados</span>
+                <span class="tag-swipe-face tag-swipe-face--fill" aria-hidden="true">LGPD &amp; proteção de dados</span>
+              </li>
+
+              <li class="tag-swipe" data-lang="git" tabindex="0">
+                <span class="tag-swipe-face tag-swipe-face--base">UI/UX (estudo autodidata)</span>
+                <span class="tag-swipe-face tag-swipe-face--fill" aria-hidden="true">UI/UX (estudo autodidata)</span>
+              </li>
+              
+
+              <li class="tag-swipe" data-lang="git" tabindex="0">
+                <span class="tag-swipe-face tag-swipe-face--base">Inglês</span>
+                <span class="tag-swipe-face tag-swipe-face--fill" aria-hidden="true">Inglês</span>
+              </li>
+            </ul>
+          </article>
         </div>
       </section>
 
       <section id="projetos" class="section container reveal">
-        <h2>Projetos</h2>
+        <div class="section-head">
+          <span class="section-index">03</span>
+          <h2>Projetos</h2>
+        </div>
         <p class="section-intro">
-          Alguns projetos acadêmicos e pessoais.
+          Três projetos autorais e dois estudos de back-end/banco de dados — todo o
+          código está aberto no GitHub.
         </p>
-        <div class="projects-grid">
+
+        <article class="project-featured">
+          <span class="eyebrow">Projeto em destaque</span>
+          <div class="project-featured-grid">
+            <div class="project-featured-media">
+              <div class="phone-frame">
+                <div class="project-carousel">
+                  <div class="project-carousel-track">
+                    <div class="project-carousel-slide"><img src="hotelfy1.jpg" alt="Hotelfy — tela inicial com destaques de países" loading="lazy" width="720" height="1558" /></div>
+                    <div class="project-carousel-slide"><img src="hotelfy2.jpg" alt="Hotelfy — listagem de quartos por categoria" loading="lazy" width="720" height="1558" /></div>
+                    <div class="project-carousel-slide"><img src="hotelfy3.jpg" alt="Hotelfy — tela de detalhes do quarto" loading="lazy" width="720" height="1558" /></div>
+                  </div>
+                  <button type="button" class="carousel-btn carousel-prev" aria-label="Imagem anterior"><svg class="icon"><use href="#icon-chevron-left"></use></svg></button>
+                  <button type="button" class="carousel-btn carousel-next" aria-label="Próxima imagem"><svg class="icon"><use href="#icon-chevron-right"></use></svg></button>
+                  <div class="carousel-dots"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-featured-body">
+              <h3>Hotelfy</h3>
+
+              <div class="field">
+                <span class="field-label">Problema</span>
+                <p>Explorar hotéis de luxo em apps diferentes costuma ser inconsistente — cada plataforma organiza fotos, categorias e informações de um jeito, o que dificulta comparar opções antes de decidir.</p>
+              </div>
+              <div class="field">
+                <span class="field-label">Solução</span>
+                <p>Um app em Flutter com uma experiência de navegação única entre categorias de hotéis: listagem em destaque, filtro por categoria e uma tela de detalhes completa por quarto, com transições e animações próprias em vez dos componentes padrão do framework.</p>
+              </div>
+
+              <ul class="tag-list">
+                <li>Flutter</li>
+                <li>Dart</li>
+                <li>Material Design</li>
+                <li>AnimationController</li>
+              </ul>
+
+              <div class="field">
+                <span class="field-label">Meu papel</span>
+                <p>Projeto acadêmico individual — arquitetura, telas e animações.</p>
+              </div>
+
+              <div class="field">
+                <span class="field-label">Principais funcionalidades</span>
+                <ul class="feature-list">
+                  <li>Listagem e filtro de quartos por categoria</li>
+                  <li>Tela de detalhes com descrição completa e múltiplas imagens</li>
+                  <li>Transições e animações customizadas</li>
+                  <li>Destaques de "novo" e "desconto" na listagem</li>
+                </ul>
+              </div>
+
+              <p class="project-note">
+                Reserva, login e integração com API de hotéis estão no roadmap do
+                projeto — hoje o foco é a experiência de navegação e a interface.
+              </p>
+
+              <div class="project-links">
+                <a href="https://github.com/bauerzinn/Hotelfy" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">
+                  GitHub <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="project-secondary-grid">
           <article class="project-card">
             <div class="project-carousel">
               <div class="project-carousel-track">
-                <div class="project-carousel-slide"><img src="todolist1.jpeg" alt="To Do List - tela 1" /></div>
-                <div class="project-carousel-slide"><img src="todolist2.jpeg" alt="To Do List - tela 2" /></div>
-                <div class="project-carousel-slide"><img src="todolist3.jpeg" alt="To Do List - tela 3" /></div>
+                <div class="project-carousel-slide"><img src="Soundplayer1.jpg" alt="SoundWave — biblioteca de músicas" loading="lazy" width="1400" height="874" /></div>
+                <div class="project-carousel-slide"><img src="Soundplayer2.jpg" alt="SoundWave — biblioteca de músicas, segunda tela" loading="lazy" width="1400" height="874" /></div>
               </div>
-              <button type="button" class="carousel-btn carousel-prev" aria-label="Imagem anterior"><i data-lucide="chevron-left"></i></button>
-              <button type="button" class="carousel-btn carousel-next" aria-label="Próxima imagem"><i data-lucide="chevron-right"></i></button>
+              <button type="button" class="carousel-btn carousel-prev" aria-label="Imagem anterior"><svg class="icon"><use href="#icon-chevron-left"></use></svg></button>
+              <button type="button" class="carousel-btn carousel-next" aria-label="Próxima imagem"><svg class="icon"><use href="#icon-chevron-right"></use></svg></button>
+              <div class="carousel-dots"></div>
+            </div>
+            <div class="project-body">
+              <h3>SoundWave — Player de Música</h3>
+              <div class="field">
+                <span class="field-label">Problema</span>
+                <p>Organizar e tocar uma biblioteca de música local sem depender de streaming, com controle sobre playlists, favoritos e histórico.</p>
+              </div>
+              <div class="field">
+                <span class="field-label">Solução</span>
+                <p>Player desktop em Python com biblioteca pesquisável, playlists, favoritos, histórico de reprodução e controles completos de reprodução e volume.</p>
+              </div>
+              <ul class="tag-list">
+                <li>Python</li>
+                <li>Tkinter</li>
+                <li>Pygame</li>
+                <li>Pillow</li>
+              </ul>
+              <div class="field">
+                <span class="field-label">Meu papel</span>
+                <p>Projeto individual, com testes unitários (<code>test_unit.py</code>) cobrindo a lógica principal.</p>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/bauerzinn/MusicPlayer" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">
+                  GitHub <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-carousel">
+              <div class="project-carousel-track">
+                <div class="project-carousel-slide"><img src="todolist1.jpeg" alt="To Do List — tela principal" loading="lazy" width="969" height="886" /></div>
+                <div class="project-carousel-slide"><img src="todolist2.jpeg" alt="To Do List — tarefas adicionadas" loading="lazy" width="1092" height="881" /></div>
+                <div class="project-carousel-slide"><img src="todolist3.jpeg" alt="To Do List — validação de formulário" loading="lazy" width="1638" height="882" /></div>
+              </div>
+              <button type="button" class="carousel-btn carousel-prev" aria-label="Imagem anterior"><svg class="icon"><use href="#icon-chevron-left"></use></svg></button>
+              <button type="button" class="carousel-btn carousel-next" aria-label="Próxima imagem"><svg class="icon"><use href="#icon-chevron-right"></use></svg></button>
               <div class="carousel-dots"></div>
             </div>
             <div class="project-body">
               <h3>To Do List</h3>
-              <p>
-                Aplicação web de lista de tarefas desenvolvida com HTML, CSS e JavaScript, permitindo adicionar, remover e marcar tarefas como concluídas.
-              </p>
-              <p class="techs">Html · Css · JavaScript</p>
-              <div class="project-actions">
-                <a href="https://github.com/bauerzinn/To_do_list" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">GitHub</a>
+              <div class="field">
+                <span class="field-label">Problema</span>
+                <p>Gerenciar tarefas do dia a dia direto no navegador, sem instalar nada e sem permitir tarefas vazias ou mal preenchidas.</p>
+              </div>
+              <div class="field">
+                <span class="field-label">Solução</span>
+                <p>Aplicação web com validação de formulário para adicionar, concluir e remover tarefas.</p>
+              </div>
+              <ul class="tag-list">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+              </ul>
+              <div class="field">
+                <span class="field-label">Meu papel</span>
+                <p>Projeto individual — um dos primeiros focados só em front-end.</p>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/bauerzinn/To_do_list" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">
+                  GitHub <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
+                </a>
               </div>
             </div>
           </article>
+        </div>
 
-          <article class="project-card">
-            <div class="project-carousel">
-              <div class="project-carousel-track">
-                <div class="project-carousel-slide"><img src="Soundplayer1.png" alt="" /></div>
-                <div class="project-carousel-slide"><img src="Soundplayer2.png" alt="" /></div>
-              </div>
-              <button type="button" class="carousel-btn carousel-prev" aria-label="Imagem anterior"><i data-lucide="chevron-left"></i></button>
-              <button type="button" class="carousel-btn carousel-next" aria-label="Próxima imagem"><i data-lucide="chevron-right"></i></button>
-              <div class="carousel-dots"></div>
+        <div class="project-compact-list">
+          <h3 class="compact-heading">Outros projetos de back-end &amp; banco de dados</h3>
+
+          <article class="project-compact">
+            <div class="project-compact-head">
+              <h4>Almoxarifado</h4>
+              <a href="https://github.com/bauerzinn/Almoxarifado" target="_blank" rel="noopener noreferrer" class="compact-link">
+                GitHub <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
+              </a>
             </div>
-            <div class="project-body">
-              <h3>Soundplayer</h3>
-              <p>
-                Aplicação de player de música desenvolvida com Python, permitindo reproduzir, pausar, avançar e retroceder músicas.
-              </p>
-              <p class="techs">Python</p>
-              <div class="project-actions">
-                <a href="https://github.com/bauerzinn/MusicPlayer" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">GitHub</a>
-              </div>
-            </div>
+            <p>Sistema de cadastro e controle de produtos em Python, com arquitetura MVC e servidor HTTP próprio (biblioteca padrão <code>http.server</code>, sem framework web).</p>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>MVC</li>
+              <li>http.server</li>
+            </ul>
+            <p class="project-role-inline">Projeto em dupla, com Rafael Grabowski de Lima.</p>
           </article>
 
-          <article class="project-card">
-            <div class="project-carousel">
-              <div class="project-carousel-track">
-                <div class="project-carousel-slide"><img src="hotelfy1.PNG" alt="Hotelfy - tela 1" /></div>
-                <div class="project-carousel-slide"><img src="hotelfy2.PNG" alt="Hotelfy - tela 2" /></div>
-                <div class="project-carousel-slide"><img src="hotelfy3.PNG" alt="Hotelfy - tela 3" /></div>
-              </div>
-              <button type="button" class="carousel-btn carousel-prev" aria-label="Imagem anterior"><i data-lucide="chevron-left"></i></button>
-              <button type="button" class="carousel-btn carousel-next" aria-label="Próxima imagem"><i data-lucide="chevron-right"></i></button>
-              <div class="carousel-dots"></div>
+          <article class="project-compact">
+            <div class="project-compact-head">
+              <h4>Cadastro de Cursos</h4>
+              <a href="https://github.com/bauerzinn/Cadastro_de_cursos" target="_blank" rel="noopener noreferrer" class="compact-link">
+                GitHub <svg class="icon icon-sm"><use href="#icon-arrow-up-right"></use></svg>
+              </a>
             </div>
-            <div class="project-body">
-              <h3>Hotelfy</h3>
-              <p>
-                Interface moderna para visualização e reserva de quartos de hotel de luxo ao redor do mundo.
-                O aplicativo permite navegar entre diferentes tipos de quartos, visualizar detalhes, imagens e informações importantes antes de realizar uma reserva.
-              </p>
-              <p class="techs">Flutter · Dart</p>
-              <div class="project-actions">
-                <a href="https://github.com/bauerzinn/Hotelfy" target="_blank" rel="noopener noreferrer" class="btn btn-small btn-outline">GitHub</a>
-              </div>
-            </div>
+            <p>Aplicação em Streamlit para cadastrar cursos concluídos, com persistência em SQL Server via <code>pyodbc</code>.</p>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>Streamlit</li>
+              <li>SQL Server</li>
+            </ul>
+            <p class="project-role-inline">Projeto individual, acadêmico.</p>
           </article>
         </div>
       </section>
 
       <section id="experiencia" class="section container reveal">
-        <h2>Formação</h2>
-        <div class="timeline">
-          <article class="timeline-item">
-            <h3>Tecnologo em Análise e Desenvolvimento de Sistemas</h3>
-            <p>
-              Formação voltada para desenvolvimento de sistemas, com foco em 
-              análise, design, implementação e manutenção de software.
-            </p>
-          </article>
-          <article class="timeline-item">
-            <h3>Graduação em Ciência da Computação</h3>
-            <p>
-              Formação voltada para fundamentos de computação, engenharia de
-              software e desenvolvimento orientado a soluções.
-            </p>
-          </article>
-          <article class="timeline-item">
-            <h3>Estudos em Design Ui & UX</h3>
-            <p>
-              Aprendizado contínuo em design de interface e experiência do usuário.
-            </p>
-          </article>
+        <div class="section-head">
+          <span class="section-index">04</span>
+          <h2>Experiência</h2>
         </div>
-      </section>
 
-      <section id="carreiras" class="section container reveal">
-        <h2>Carreiras</h2>
-        <div class="career-grid">
-          <article class="career-card">
-            <i data-lucide="building-2"></i>
-            <h3>SANEPAR</h3>
-            <ul class="career-list">
-              <li>Auxílio ao DPO na conformidade com a LGPD.</li>
-              <li>Apoio no mapeamento e organização de processos de tratamento de dados pessoais.</li>
-              <li>Suporte a demandas de T.I e governança e segurança da informação.</li>
-              <li>Participação no acompanhamento de processos e controles de conformidade regulatória.</li>
-              <li>Auxílio na elaboração de relatórios, registros e documentações da gestão de dados pessoais.</li>
-            </ul>
-          </article>
-          <article class="career-card">
-            <i data-lucide="credit-card"></i>
-            <h3>Vendpago</h3>
-            <ul class="career-list">
-              <li>Atendimento e suporte a clientes na utilização de sistemas da VendPago integrados a equipamentos automatizados.</li>
-              <li>Suporte técnico relacionado a máquinas de vending machine, gruas (máquinas de prêmios) e lavanderias automáticas.</li>
-              <li>Orientação a clientes sobre configuração, funcionamento e uso da plataforma de pagamento.</li>
-              <li>Registro e acompanhamento de chamados técnicos, garantindo a resolução das demandas dos clientes.</li>
-              <li>Comunicação com equipes internas para análise e solução de problemas técnicos.</li>
-            </ul>
-          </article>
-          <article class="career-card">
-            <i data-lucide="shield-check"></i>
-            <h3>GoHome</h3>
-            <ul class="career-list">
-              <li>Suporte técnico a clientes no uso de sistemas de segurança e monitoramento em instituições de ensino.</li>
-              <li>Atendimento e resolução de chamados relacionados à plataforma e aos dispositivos de segurança.</li>
-              <li><strong>Manutenção e atualização de informações no banco de dados SQL</strong>, realizando ajustes e correções quando necessário.</li>
-              <li>Análise de inconsistências em dados e suporte na resolução de problemas relacionados ao sistema.</li>
-              <li>Apoio à equipe técnica na identificação e solução de falhas operacionais.</li>
-            </ul>
-          </article>
-        </div>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-date">Nov 2025 — atual</div>
+            <div class="timeline-content">
+              <h3>Suporte Técnico <span>· GO HOME</span></h3>
+              <ul>
+                <li>Suporte técnico a clientes no uso de sistemas de segurança e monitoramento em instituições de ensino.</li>
+                <li>Manutenção e atualização de dados em SQL Server, com ajustes e correções quando necessário.</li>
+                <li>Análise de inconsistências e apoio na resolução de problemas relacionados ao sistema.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-date">Jan 2025 — Out 2025</div>
+            <div class="timeline-content">
+              <h3>Serviço Militar Obrigatório <span>· Exército Brasileiro</span></h3>
+              <p>Serviço militar obrigatório, em regime presencial.</p>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-date">Out 2024 — Jan 2025</div>
+            <div class="timeline-content">
+              <h3>Estagiário de Suporte Técnico <span>· Vendpago</span></h3>
+              <ul>
+                <li>Suporte a clientes na utilização de sistemas de pagamento integrados a equipamentos automatizados.</li>
+                <li>Identificação e resolução de problemas operacionais do sistema, em contato direto com as equipes internas.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-date">Jun 2024 — Out 2024</div>
+            <div class="timeline-content">
+              <h3>Estagiário de T.I. <span>· SANEPAR</span></h3>
+              <ul>
+                <li>Auxílio ao Encarregado de Proteção de Dados (DPO) na conformidade com a LGPD.</li>
+                <li>Apoio no mapeamento e organização de processos de tratamento de dados pessoais.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-date">Em andamento</div>
+            <div class="timeline-content">
+              <h3>Bacharelado em Ciência da Computação <span>· Universidade Tuiuti do Paraná</span></h3>
+              <p>Em andamento, 7º período (noturno) — fundamentos de algoritmos, estruturas de dados e engenharia de software.</p>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-date">2021 — 2022</div>
+            <div class="timeline-content">
+              <h3>Tecnólogo em Análise e Desenvolvimento de Sistemas <span>· SENAI</span></h3>
+              <p>Concluído — formação voltada para análise, design, implementação e manutenção de software.</p>
+            </div>
+          </li>
+        </ol>
       </section>
 
       <section id="contato" class="section container reveal">
-        <h2>Contato</h2>
-        <p class="section-intro">
-          Aberto a oportunidades, parcerias e novos desafios.
-        </p>
-        <div class="contact-grid">
-          <a href="mailto:gabbauer1218@gmail.com" class="contact-item">
-            <i data-lucide="mail">gabbauer1218@gmail.com</i> Email
-          </a>
-          <a href="https://github.com/bauerzinn" target="_blank" rel="noreferrer" class="contact-item">
-            <i data-lucide="github"></i> GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/gabriel-bauer-a213b9271/" target="_blank" rel="noreferrer" class="contact-item">
-            <i data-lucide="linkedin"></i> LinkedIn
-          </a>
-          <a href="./Currículo Gabriel Bauer.pdf" class="contact-item">
-            <i data-lucide="download"></i> Baixar CV
-          </a>
+        <div class="section-head">
+          <span class="section-index">05</span>
+          <h2>Contato</h2>
         </div>
+        <p class="section-intro">
+          Aberto a oportunidades como desenvolvedor júnior — remoto, híbrido ou
+          presencial em Curitiba (PR).
+        </p>
+
+        <ul class="contact-list">
+          <li>
+            <a href="mailto:gabbauer1218@gmail.com" class="contact-item">
+              <svg class="icon"><use href="#icon-mail"></use></svg>
+              <span>gabbauer1218@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/bauerzinn" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <svg class="icon"><use href="#icon-github"></use></svg>
+              <span>github.com/bauerzinn</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/gabriel-bauer-a213b9271/" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <svg class="icon"><use href="#icon-linkedin"></use></svg>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a href="./Gabriel Bauer.pdf" target="_blank" rel="noopener" class="contact-item">
+              <svg class="icon"><use href="#icon-download"></use></svg>
+              <span>Currículo em PDF</span>
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
 
     <footer class="footer container">
-      <p>© <span id="year"></span> Gabriel Bauer. Todos os direitos reservados.</p>
+      <p>© <span id="year"></span> Gabriel Bauer.</p>
+      <p class="footer-note">Feito à mão com HTML, CSS e JavaScript — sem framework.</p>
     </footer>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
     <script src="./script.js"></script>
   </body>
 </html>
